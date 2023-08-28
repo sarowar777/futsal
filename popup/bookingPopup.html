@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>BookingPopup</title>
+    <link rel="stylesheet" href="bookingPopup.css" />
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <button class="openPopup" onclick="document.getElementById('Popup').style.display='block'">Open Modal</button>
+
+<div id="Popup" class="backdrop">
+    <div class="popupContainer">
+        <div class="popupWrap">
+            <span class="closePopup" onclick="document.getElementById('Popup').style.display='none'">✕</span>
+            <h4 class="popupHeader">
+                Book Futsal
+            </h4>
+            <form action="" class="popupForm">
+                <label for="date" class="popupFormField">
+                    <span>Today</span>
+                    <span>Tommorrow</span>
+                    <span>11</span>
+                    <span>12</span>
+                    <input type="date" name="" id="">
+                </label>
+                <label for="futsalName" class="popupFormField">
+                    <span style="font-weight: 600;"> Futsal</span>
+                    <input type="text" name="futsalName" value="Shankhamul Futsal" id="futsalName">
+                </label>
+                <label for="futsalLocation" class="popupFormField">
+                    <span style="font-weight: 600;">Location</span>
+                    <input type="text" name="futsalLocation" id="futsalLocation" value="Shankhamul">
+                </label>
+                <label for="futsalSize" class="popupFormField">
+                    <span style="font-weight: 600;">Size</span>
+                    <select name="futsalSize" id="futsalSize" multiple>
+                        <option value="5A" style="margin-right: 20px;">5A</option>
+                        <option value="7A">7A</option>
+                    </select>
+                </label>
+                <label for="futsalTime" class="popupFormField">
+                    <span style="font-weight: 600;">Time</span>
+                </label>
+                <label for="futsalField" class="futsalField">
+                    <span style="font-weight: 600;">Field</span>
+                    <select name="futsalField" id="futsalField" multiple>
+                        <option value="1" class="field1">Field 1</option>
+                        <option value="2" class="field1">Field 2</option>
+                        <option value="3" class="field1">Field 3</option>
+                    </select>
+                </label>
+                <button type="submit" class="bookButton">Book Now</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
