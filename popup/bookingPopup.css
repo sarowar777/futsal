@@ -206,7 +206,7 @@ input[type=date]:focus::-webkit-datetime-edit {
   flex-direction: column;
 }
 
-.divider{
+.bookingDivider{
   content:" ";
   width: 85%;
   margin-left: 7.25%;

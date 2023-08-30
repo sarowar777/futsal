@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <link rel="stylesheet" href="../blog.css" />
+    <link rel="stylesheet" href="opponentFinder.css" />
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+    <!--Time custom cdn-->
+    <link rel="stylesheet" href="css/mobiscroll.javascript.min.css">
+    <script src="js/mobiscroll.javascript.min.js"></script>
+
+    <!-- jquery cdn-->
+    <script src=" https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- datable cdn -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+    <!--Datatable style-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+    <!--Initializing datatables-->
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
+
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <!-- Move to up button -->
+    <div class="scroll-button">
+        <a href="#home"><i class="fas fa-arrow-up"></i></a>
+    </div>
+    <!-- navgaition menu -->
+    <nav class="navMenu">
+        <div class="navbar">
+            <div class="logo"><img src="pictures/kickers logo.png"></div>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Futsal</a></li>
+                <li><a href="#skills">Booking</a></li>
+                <li><a href="#services">Finder</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <div class="cancel-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+            </ul>
+            <div class="navbar_right">
+                <div class="notifications">
+                    <div class="icon_wrap"><i class="far fa-bell"></i></div>
+
+                </div>
+                <div class="profile">
+                    <div class="icon_wrap">
+                        <img src="pictures/user1.png">
+                        <span class="name">Ram Shrestha</span>
+                        <!-- <i class="fa-solid fa-chevron-down"></i> -->
+                    </div>
+                </div>
+            </div>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+    </nav>
+    <header class="finderHeader">
+        <h3>Opponent Finder</h3>
+        <!-- <div class="divider"></div> -->
+        <div class="findForm">
+            <form action="" id="findForm">
+                <div class="findFormFields">
+                    <div class="findFormField">
+                        <input type="text" name="futsalName" id="futsalName" placeholder="Enter futsal name.." required>
+                    </div>
+                    <div class="findFormField">
+                        <input type="text" name="futsalLocation" id="futsalLocation"
+                            placeholder="Enter futsal location.." required>
+                    </div>
+                    <div class="findFormField">
+                        <select name="futsalSize" id="futsalSize" required>
+                            <option value="5A">5A</option>
+                            <option value="7A">7A</option>
+                        </select>
+                    </div>
+                    <div class="findFormField">
+                        <input placeholder="Enter booked date.." type="text" onfocus="(this.type = 'date')" id="date"
+                            style=" width: 140px; overflow: hidden;" required>
+                    </div>
+                    <div class="findFormField">
+                        <input id="demo-one-input" placeholder="Please select time...." required />
+                    </div>
+                    <button type="submit" class="findButton">Find</button>
+                </div>
+            </form>
+        </div>
+    </header>
+    <div class="finderBody">
+        <div class="finderContainer">
+            <table id="myTable" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Futsal</th>
+                        <th>Location</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="1">
+                        <td class="row-data">Tiger Nixon</td>
+                        <td class="row-data">Sankhamul Futsal</td>
+                        <td class="row-data">Sankhamul</td>
+                        <td class="row-data">5A</td>
+                        <td class="row-data">2011-04-25</td>
+                        <td class="row-data">10:00 - 11:00</td>
+                        <td>
+                            <button class="acceptBadge" onclick="show()">Accept</button>
+                        </td>
+                    </tr>
+                    <tr id="2">
+                        <td class="row-data">Garrett Winters</td>
+                        <td class="row-data">Ball Park academy</td>
+                        <td class="row-data">Imadol</td>
+                        <td class="row-data">5a</td>
+                        <td class="row-data">2011-07-25</td>
+                        <td class="row-data">06:00 - 07:00</td>
+                        <td>
+                            <button class="acceptBadge" onclick="show()">Accept</button>
+                        </td>
+                    </tr>
+                    <tr id="3">
+                        <td class="row-data">Ashton Cox</td>
+                        <td class="row-data">Dhuku Futsal</td>
+                        <td class="row-data">Dhuku</td>
+                        <td class="row-data">7A</td>
+                        <td class="row-data">2009-01-12</td>
+                        <td class="row-data">9:00 - 10:00</td>
+                        <td>
+                            <button class="acceptBadge" onclick="show()">Accept</button>
+                        </td>
+                    </tr>
+                    <tr id="4">
+                        <td class="row-data">Cedric Kelly</td>
+                        <td class="row-data">Kumari Futsal</td>
+                        <td class="row-data">Paknajol</td>
+                        <td class="row-data">5A</td>
+                        <td class="row-data">2012-03-29</td>
+                        <td class="row-data">01:00 - 02:00</td>
+                        <td>
+                            <button class="acceptBadge" onclick="show()">Accept</button>
+                        </td>
+                    </tr>
+                    <tr id="5">
+                        <td class="row-data">Airi Satou</td>
+                        <td class="row-data">Lalitpur 5A Side</td>
+                        <td class="row-data">Sanepa</td>
+                        <td class="row-data">5A</td>
+                        <td class="row-data">2008-11-28</td>
+                        <td class="row-data">07:00 - 08:00</td>
+                        <td>
+                            <button class="acceptBadge" onclick="show()">Accept</button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>User</th>
+                        <th>Futsal</th>
+                        <th>Location</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <script>
+        function show() {
+            //this gives id of tr whose button was clicked
+            var rowId = event.target.parentNode.parentNode.id;
+
+            /*returns array of all elements with
+            "row-data" class within the row with given id*/
+            var data = document.getElementById(rowId).querySelectorAll(".row-data");
+
+            var user = data[0].innerHTML;
+            var futsalName = data[1].innerHTML;
+            var location = data[2].innerHTML;
+            var type = data[3].innerHTML;
+            var date = data[4].innerHTML;
+            var time = data[5].innerHTML;
+
+            console.log("user: " + user + " " +
+                "futsal: " + futsalName + " " +
+                "location:  " + location + " " +
+                "type: " + type + " " +
+                "date: " + date + " " +
+                "time: " + time + " ")
+        }
+
+        // time functionality
+        mobiscroll.setOptions({
+            locale: mobiscroll.localeEn,
+            theme: 'ios',
+            themeVariant: 'light'
+        });
+
+
+        mobiscroll.datepicker('#demo-one-input', {
+            controls: ['time'],
+            select: 'range',
+            display: 'anchored',
+            touchUi: true
+        });
+    </script>
+</body>
+
+</html>

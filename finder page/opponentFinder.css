@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+.navMenu{
+    background-color: #003B95;
+}
+.finderHeader{
+    font-family: 'Poppins', sans-serif;
+    background-color: #003B95;
+    text-align: center;
+    height: 270px;
+    color: white;
+    padding-top: 140px;
+    font-size: 2.2rem;
+    display: flex;
+    flex-direction: column;
+}
+.finderHeader>h3{
+    font-weight: 100;
+}
+.finderHeader .divider{
+    content: " ";
+    width:100%;
+    margin-top: 5px;
+    height: 1.2px;
+    background: white;
+}
+.finderBody{
+    font-family: 'Poppins', sans-serif;
+    background-color: #F2F3F7;
+    padding: 80px 0;
+}
+.finderContainer{
+    width: 90%;
+    margin-left: 5%;
+    padding: 25px;
+    background-color: white;
+    font-size: 1rem;
+}
+
+.acceptBadge{
+    border:none;
+    background-color: #DAF4EB;
+    color: #37c491;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.acceptBadge:hover{
+    border:#37c491 solid 1px;
+    color: #37c491;
+    background-color: transparent;
+}
+
+.findForm{
+    top: 37%;
+    left: 50%;
+    max-width: 1000px;
+    position: absolute;
+    transform: translate(-50%,-54px);
+    width: calc(56.8% - 10px);
+    z-index: 3;
+}
+.findFormFields{
+    background-color: #f68205;
+    border-radius: 8px;
+    box-shadow:  0 2px 8px 0 rgba(26,26,26,0.16);
+    display: flex;
+    gap: 5px;
+    margin: 20px 0;
+    padding: 4px;
+}
+.findFormField{
+    background-color: white;
+    border-radius: 4px;
+}
+.findFormField>input,
+.findFormField>select{
+border: none;
+padding:5px 10px;
+outline: none;
+}
+
+
+.findButton{
+    background-color: #003B95;
+    border:none;
+    color: white;
+    padding: 0px 20px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}   
