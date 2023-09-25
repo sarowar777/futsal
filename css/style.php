@@ -121,7 +121,7 @@ body{
 .input-box:focus ~ label,.input-box:valid ~ label{
     top: 2px;
     font-size: 10px;
-    color: #c12828;
+    color: green;
     font-weight: 500;
 }
 
@@ -216,7 +216,7 @@ i{
     left: 0;
     width: 228px;
     height: 50px;
-    background: #cccccd;
+    background: #FF6700;
     border-radius: 10px;
     box-shadow: 2px 0px 12px rgba(0, 0, 0, 0.1);
     transition: .5s ease-in-out;

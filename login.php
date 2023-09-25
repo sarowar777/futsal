@@ -10,7 +10,9 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Kickers</title>
-    <?php include 'css/style.php' ?>
+    <?php include 'css/style.php'
+
+    ?>
 
 </head>
 
@@ -77,34 +79,71 @@ session_start();
     if (isset($_POST['submit1'])) {
         $email1 = $_POST['signin_email'];
         $password1 = $_POST['signin_pass'];
+        $email_search = "select * from usertable where user_Email='$email1'";
+        $result1 = $conn->query($email_search);
+        $email_count = $result1->num_rows;
+        //for futsal
+        $email_search_futsal = "select * from futsaltable where futsal_Email='$email1'";
+        $resultFutsal = $conn->query($email_search_futsal);
+        $email_count_futsal = $resultFutsal->num_rows;
 
-        $email_search = "select * from usertable where user_Email='$email1'and user_Password='$password1'";
-        $result = $conn->query($email_search);
-        if ($result->num_rows) {
-            // $email_pass = $result->fetch_assoc();
-            // //corresponding password fetch
-            // $db_pass = $email_pass['user_Password'];
-            // //password checker
-            // $pass_decode = password_verify($password1, $db_pass);
-            // if ($pass_decode) {
-            //     echo "login successful";
-            // } else {
-            //     echo "password Incorrect";
-            // }
+        if ($email_count) {
+            $email_pass = $result1->fetch_assoc();
+            $db_pass = $email_pass['user_Password'];
+            // $pass_de=password_verify($password1,$db_pass);
+            $_SESSION['username'] = $email_pass['user_Name'];
+            $_SESSION['userId'] = $email_pass['user_ID'];
+            if ($password1 === $db_pass) {
     ?>
 
+                <script>
+                    location.replace("home.php")
+                </script>
+            <?php
+            } 
+            //futsal
+           
+            
+            
+            else {
+            ?>
+                <script>
+                    swal("Login failed", "Please check your password", "error");
+                </script>
+            <?php
+            }
+        } elseif( $email_count_futsal){
+            $email_pass_futsal = $resultFutsal->fetch_assoc();
+            $db_pass_futsal = $email_pass_futsal['futsal_Password'];
+           
+            $_SESSION['username'] = $email_pass_futsal['futsal_Name'];
+            $_SESSION['userid'] = $email_pass_futsal['futsal_ID'];
+            if ($password1 === $db_pass_futsal) {
+    ?>
+             
+                <script>
+                    location.replace("dashboard.php")
+                </script>
+            <?php
+
+        } 
+        else {
+            ?>
+                <script>
+                    swal("Login failed", "Please check your password", "error");
+                </script>
+            <?php
+            }
+    }
+        else {
+            ?>
             <script>
-                location.replace("home.php")
-            </script>
-        <?php
-        } else {
-        ?>
-            <script>
-                swal("Login failed", "Please check email and password", "error");
+                swal("Login failed", "Please check your email", "error");
             </script>
     <?php
         }
     }
+
 
     ?>
     <div class="container">

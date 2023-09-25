@@ -6,6 +6,7 @@ let val;
 window.onscroll = function() {
   if(document.documentElement.scrollTop > 20){
     nav.classList.add("sticky");
+   
     scrollBtn.style.display = "block";
   }else{
     nav.classList.remove("sticky");
@@ -57,3 +58,4 @@ function testnoti() {
 subMenu2.classList.toggle("open-noti");
 console.log("hello1");
 }
+//for profile dropdown

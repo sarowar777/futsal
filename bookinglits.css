@@ -1,0 +1,606 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush|Great+Vibes|PT+Sans+Narrow:400,700');
+
+@font-face {
+  font-family: 'Edward';
+  src: url(../font/edwardian_script_itc.ttf) format('truetype'),
+    url(../font/edwardian_script_itc.otf) format('opentype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: transparent;
+  background-image: url('back.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+nav .navbar .logo {
+  display: flex;
+  position: relative;
+
+}
+
+nav .navbar .logo img {
+  width: 70px;
+}
+
+nav.sticky .navbar .logo a {
+  color: #fff;
+}
+
+nav {
+  position: fixed;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 998;
+  transition: all 0.3s ease;
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: #F0F8FF;
+}
+
+nav.sticky {
+  background: rgba(0, 0, 0, 0.85);
+
+  padding: 13px 0;
+}
+
+nav .navbar {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+nav .navbar .menu {
+  display: flex;
+  position: relative;
+  left: 100px;
+}
+
+nav .navbar .menu li {
+  list-style: none;
+  margin: 0 8px;
+
+}
+
+.navbar .menu a {
+  font-size: 20px;
+  font-weight: 900px;
+  color: white;
+  padding: 6px 0;
+  transition: all 0.4s ease;
+  text-decoration: none;
+}
+
+.navbar .menu a:hover {
+  color: #ff8800;
+}
+
+nav.sticky .menu a {
+  color: #FFF;
+}
+
+nav.sticky .menu a:hover {
+  color: #b49383;
+}
+
+.navbar .media-icons a {
+  color: #4070f4;
+  font-size: 18px;
+  margin: 0 6px;
+}
+
+nav.sticky .media-icons a {
+  color: #FFF;
+}
+
+/*notification*/
+ .action2 {
+  position: relative;
+  top: 5px;
+  left: 170px;
+}
+
+.action2 .notification {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  left:120px;
+}
+
+.action2 .notification img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+}
+
+.action .profile {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+
+}
+
+.action .profile img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+/* home section styling */
+.home {
+  height: 100vh;
+  width: 100%;
+  background: url("pictures/photo14.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Ubuntu', sans-serif;
+
+
+}
+
+.home .home-content {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+}
+
+.text1 {
+  top: -20px;
+  width: 650px;
+  left: 650px;
+  position: relative;
+}
+
+
+.home .text-one {
+  position: relative;
+  font-size: 40px;
+  color: white;
+  left: 180px;
+
+
+}
+
+.home .text-two {
+  position: relative;
+  color: #92acbc;
+  font-size: 55px;
+  font-weight: 600;
+
+  text-align: center;
+  left: -90px;
+
+}
+
+.home .text-three {
+  position: relative;
+  left: -18px;
+  font-size: 60px;
+  margin: 5px 0;
+  color: #b9becd;
+  align-items: center;
+}
+
+.home .text-four {
+  font-size: 23px;
+  margin: 5px 0;
+  color: #0E2431;
+}
+
+.home .button {
+  top: 10px;
+  position: relative;
+  width: 300px;
+  margin: 14px 0;
+  left: 810px;
+}
+
+.home .button button {
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 25px;
+  font-weight: 400;
+  background: #4070f4;
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+}
+
+.home .button button:hover {
+  border-color: #4070f4;
+  background-color: #fff;
+  color: #4070f4;
+}
+
+
+/*--------------Notification-------------*/
+.action2 {
+  position: relative;
+  top: 5px;
+  left: 50px;
+}
+
+/* Side Navigation Menu Button CSS */
+nav .menu-btn,
+.navbar .menu .cancel-btn {
+  position: absolute;
+  color: #fff;
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+}
+
+nav .menu-btn {
+  color: #4070f4;
+}
+
+nav.sticky .menu-btn {
+  color: #FFF;
+}
+
+.navbar .menu .menu-btn {
+  color: #fff;
+}
+
+.action2 .notification {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.action2 .notification img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.background-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: fixed;
+}
+
+
+.container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+
+/*--------------------TOP CONTAINER----------------------------*/
+.top-container {
+  background-color: transparent;
+  color: white;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.top-container h3 {
+  text-align: center;
+  margin-top: 0px;
+  flex: 1;
+}
+
+.back-button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 50px;
+}
+
+
+/*---------------------------------Bottom container-----------------------------------------*/
+.bottom-container {
+  margin-top: 120px;
+  position: relative;
+  width: 100%;
+  height: clac(100vh-80px);
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+/*-----------Search Box----------*/
+.search-area {
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 10px 10px 10px(rgba(0, 0, 0, 0.1));
+  display: flex;
+  align-items: center;
+  width: 500px;
+  max-width: 500px;
+  margin-left: 375px;
+}
+
+.search-area input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.search-area button {
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/*------------------------------------------Filter-------------------------------------------------*/
+.filter-icon {
+  font-size: 20px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+  position: absolute;
+  right: 400px;
+  cursor: pointer;
+}
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 15px;
+  padding-bottom: 20px;
+}
+
+.filter-section select {
+  width: 200px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  text-align: center;
+  box-shadow: 0px 5px 10px 0 (0, 0, 0, 0.25);
+}
+
+.filter-panel {
+  display: none;
+  margin-left: 430px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 1px solid rgb(241, 156, 58);
+  border-radius: 15px;
+  padding: 15px;
+  position: absolute;
+  top: 90%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+
+}
+
+.filter-panel.show {
+  display: block;
+
+}
+
+#district {
+  width: 150px;
+  margin-left: 20px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 15px;
+  text-align: center;
+  box-shadow: 0px 5px 10px 0 (0, 0, 0, 0.25);
+}
+
+#city {
+  margin-left: 35px;
+  width: 150px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 15px;
+  text-align: center;
+  box-shadow: 0px 5px 10px 0 (0, 0, 0, 0.25);
+}
+
+.date-picker {
+  width: 130px;
+  margin-left: 38px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  text-align: center;
+  box-shadow: 0px 5px 10px 0 (0, 0, 0, 0.25);
+}
+
+.time-picker {
+  width: 130px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  text-align: center;
+  box-shadow: 0px 5px 10px 0 (0, 0, 0, 0.25);
+}
+
+#type {
+  width: 150px;
+  margin-left: 35px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 15px;
+  text-align: center;
+  box-shadow: 0px 5px 10px 0 (0, 0, 0, 0.25);
+}
+
+#applyFilter {
+  width: 150px;
+  margin-left: 180px;
+  background-color: orange;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 15px;
+  text-align: center;
+  box-shadow: 0px 5px 10px 0 (0, 0, 0, 0.25);
+}
+
+/*----------------------------------------FUTSAL INFO----------------------------------*/
+.futsal-info-container {
+  margin-top: 200px;
+  height: 450px;
+  overflow-y: auto;
+  margin-left: 80px;
+  padding: 20px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+
+.futsal-row {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 20px;
+  height: 140px;
+  width: 1200px;
+
+}
+
+
+.futsal-info {
+  background-color: rgba(36, 36, 36, 0.5);
+  opacity: 1;
+  color: white;
+  border: 1px solid rgb(255, 166, 0);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.futsal-info-container::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.futsal-info-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.futsal-image {
+  flex: 1;
+  max-width: 120px;
+}
+
+.futsal-image img {
+  width: 100%;
+  height: 110px;
+  border-radius: 10px;
+}
+
+.futsal-details {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.futsal-details h3 {
+  margin: 0;
+}
+
+.futsal-details p {
+  margin: 0;
+}
+
+.rating {
+  color: orange;
+}
+
+.star {
+  font-size: 20px;
+  margin-right: 2px;
+}
+
+.choose-button {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#view-button {
+  background-color: orange;
+  color: white;
+  border: none;
+  width: 90px;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#book-button {
+  background-color: orange;
+  color: white;
+  border: none;
+  width: 90px;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
