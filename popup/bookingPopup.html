@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>BookingPopup</title>
+    <link rel="stylesheet" href="bookingPopup.css" />
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/mobiscroll.javascript.min.css">
+    <script src="js/mobiscroll.javascript.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <button class="openPopup" onclick="document.getElementById('Popup').style.display='block'">Open Modal</button>
+
+    <div id="Popup" class="backdrop">
+        <div class="popupContainer">
+            <div class="popupWrap">
+                <span class="closePopup" onclick="document.getElementById('Popup').style.display='none'">✕</span>
+                <h4 class="popupHeader">
+                    Book Futsal
+                </h4>
+                <div class="bookingDivider"></div>
+                <form action="" class="popupForm" id="bookForm">
+                    <label for="futsalName" class="popupFormField">
+                        <span style="font-weight: 600;"> Futsal</span>
+                        <input type="text" name="futsalName" id="futsalName" value="Shankhamul Futsal" disabled>
+                    </label>
+                    <label for="futsalLocation" class="popupFormField">
+                        <span style="font-weight: 600;">Location</span>
+                        <input type="text" name="futsalLocation" id="futsalLocation" value="Shankhamul" disabled>
+                    </label>
+                    <label for="futsalSize" class="popupFormField">
+                        <span style="font-weight: 600;">Size</span>
+                        <select name="futsalSize" id="futsalSize" multiple required>
+                            <option value="5A" style="margin-right: 20px;">5A</option>
+                            <option value="7A">7A</option>
+                        </select>
+                    </label>
+                    <label for="date" class="popupFormField">
+                        <span style="font-weight: 600;"> Date</span>
+                        <input type="date" name="date" id="date" required>
+                    </label>
+                    <label for="demo-one-input" class="popupFormField timeInput">
+                        <span style="font-weight: 600;">Time</span>
+                        <input id="demo-one-input" placeholder="Please select time...." required />
+                    </label>
+                    <label for="futsalField" class="futsalField">
+                        <span style="font-weight: 600;">Field</span>
+                        <select name="futsalField" id="futsalField" multiple required>
+                            <option value="1" class="field1">Field 1</option>
+                            <option value="2" class="field1">Field 2</option>
+                            <option value="3" class="field1">Field 3</option>
+                        </select>
+                    </label>
+                    <button type="submit" class="bookButton">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        mobiscroll.setOptions({
+            locale: mobiscroll.localeEn,
+            theme: 'ios',
+            themeVariant: 'light'
+        });
+
+
+        mobiscroll.datepicker('#demo-one-input', {
+            controls: ['time'],
+            select: 'range',
+            display: 'anchored',
+            touchUi: true
+        });
+        let bookForm = document.getElementById("bookForm");
+        bookForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            let name= document.getElementById("futsalName");
+            let size= document.getElementById("futsalSize");
+            let time = document.getElementById("demo-one-input");
+            let field = document.getElementById("futsalField");
+            console.log(name.value);
+            console.log(size.value);
+            console.log(time.value);
+            console.log(field.value)
+            // handle submit
+        });
+    </script>
+
+
+</body>
+
+</html>
